@@ -175,12 +175,18 @@
       position: relative;
       width: min(100%, 360px);
       aspect-ratio: 0.9;
-      display: grid;
-      place-items: center;
       overflow: hidden;
       border: 1px solid rgba(242, 139, 189, 0.34);
       border-radius: 46% 46% 26px 26px;
       background: var(--surface);
+    }
+
+    .portrait-image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 35%;
     }
 
     .portrait-card::before,
@@ -199,17 +205,6 @@
     .portrait-card::after {
       width: 205px;
       height: 205px;
-    }
-
-    .monogram {
-      position: relative;
-      z-index: 1;
-      color: var(--pink);
-      font-size: clamp(5rem, 13vw, 8.5rem);
-      font-weight: 800;
-      letter-spacing: -0.12em;
-      line-height: 1;
-      transform: translateX(-0.06em);
     }
 
     .art-label {
@@ -258,17 +253,29 @@
     }
 
     .about-note {
-      padding: 26px;
+      padding: 30px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--surface);
+    }
+
+    .profile-mark {
+      width: 76px;
+      height: 76px;
+      display: block;
+      margin-bottom: 24px;
+      border: 1px solid rgba(242, 139, 189, 0.34);
+      border-radius: 50%;
+      background: var(--surface-light);
+      object-fit: cover;
     }
 
     .about-note strong {
       display: block;
       margin-bottom: 6px;
       color: var(--pink-soft);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      line-height: 1.4;
     }
 
     .about-note span {
@@ -499,7 +506,7 @@
     <nav class="nav container" aria-label="Navigasi utama">
       <a class="brand" href="#beranda">Muhammad Anggana Sabana Salim</a>
       <div class="nav-links">
-        <a href="#tentang">Tentang</a>
+        <a href="#profil">Profil</a>
         <a href="#fokus">Fokus</a>
         <a href="#karya">Karya</a>
         <a href="#kontak">Kontak</a>
@@ -511,33 +518,34 @@
     <section class="hero container" id="beranda">
       <div>
         <p class="eyebrow">Portofolio Personal</p>
-        <h1>Halo, Saya <span>Muhammad Anggana Sabana Salim</span></h1>
+        <h1>Halo, Saya <span>Muhammad Anggana Sabana Salim - Teknik Informatika</span></h1>
         <p class="hero-copy">Selamat datang di ruang personal saya. Di sini, Anda bisa mengenal saya, melihat fokus yang sedang saya kembangkan, dan menjelajahi karya pilihan.</p>
         <a class="button" href="#karya">Lihat Karya <span aria-hidden="true">-&gt;</span></a>
       </div>
-      <div class="hero-art" aria-label="Inisial Muhammad Anggana Sabana Salim">
+      <div class="hero-art">
         <div class="portrait-card">
-          <span class="monogram" aria-hidden="true">AS</span>
+          <img class="portrait-image" src="public/profile.png" alt="Foto profil Muhammad Anggana Sabana Salim">
         </div>
         <div class="art-label">Terbuka Untuk Kolaborasi</div>
       </div>
     </section>
 
-    <section class="section" id="tentang">
+    <section class="section" id="profil">
       <div class="container about-grid">
         <div>
-          <p class="eyebrow">Tentang Saya</p>
-          <div class="about-note">
+          <p class="eyebrow">Profil Saya</p>
+          <div class="about-note" aria-label="Profil Muhammad Anggana Sabana Salim">
+            <img class="profile-mark" src="public/profile.png" alt="Foto profil Muhammad Anggana Sabana Salim">
             <strong>Muhammad Anggana Sabana Salim</strong>
-            <span>Portofolio Personal</span>
+            <span>Profil personal &amp; karya pilihan</span>
           </div>
         </div>
         <div class="about-copy">
           <div class="section-heading">
             <h2>Senang Berkenalan Dengan Anda</h2>
           </div>
-          <p>Halaman ini adalah tempat untuk memperkenalkan diri dan merangkum perjalanan, minat, serta karya saya. Saya percaya hasil yang baik berawal dari rasa ingin tahu, komunikasi yang terbuka, dan perhatian pada detail.</p>
-          <p>Bagian ini dapat dikembangkan dengan cerita, pengalaman, atau tujuan yang paling ingin Anda bagikan kepada pengunjung.</p>
+          <p>Saya Muhammad Anggana Sabana Salim. Di sini saya berbagi hal-hal yang sedang saya pelajari, minat yang saya kembangkan, dan karya yang ingin saya tunjukkan.</p>
+          <p>Saya senang mengeksplorasi ide baru dan terus berkembang melalui proses belajar dan berkarya.</p>
         </div>
       </div>
     </section>
